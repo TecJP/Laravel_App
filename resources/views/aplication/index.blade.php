@@ -11,13 +11,13 @@
     <a href="/aplication/new_user">Novo Usuário</a>
     <table>
         <thead>
-            <th>ID -- </th>
-            <th>JOGADOR -- </th>
-            <th>DECK -- </th>
-            <th>WINS -- </th>
-            <th>LOSES -- </th>
-            <th>TOT</th>
-            <th>AÇÃO</th>
+            <th>ID||</th>
+            <th>JOGADOR||</th>
+            <th>DECK||</th>
+            <th>WINS||</th>
+            <th>LOSES||</th>
+            <th>TOTAL||</th>
+            <th>AÇÃO||</th>
         </thead>
         <tbody>
             @foreach ($usuarios as $usuario)
@@ -27,10 +27,10 @@
                     <td>{{$usuario->deck}}</td>
                     <td>{{$usuario->wins}}</td>
                     <td>{{$usuario->loses}}</td>
-                    <td></td>
+                    <td>{{$usuario->wins + $usuario->loses}}</td>
                     <td>
-                        <a href="">Editar</a>
-                        <a href="">Remover</a>
+                        <a href="{{"/aplication/{$usuario->id}/form_editar"}}">Editar</a>
+                        <a href="{{"/aplication/{$usuario->id}/excluir"}}" onclick="event.preventDefault();if(confirm('Deseja excluir este registro?')){window.location.href='{{"/aplication/{$usuario->id}/excluir"}}'}">Remover</a>
                     </td>
                 </tr>
             @endforeach
