@@ -32,7 +32,7 @@
                         <td>{{$usuario->wins + $usuario->loses}}</td>
                         <td>
                             <a href="{{"/aplication/{$usuario->id}/form_editar"}}">Editar</a>
-                            <a href="{{"/aplication/{$usuario->id}/excluir"}}" onclick="event.preventDefault();if(confirm('Deseja excluir este registro?')){window.location.href='{{"/aplication/{$usuario->id}/excluir"}}'}">Remover</a>
+                            <a href="{{"/aplication/{$usuario->id}/git excluir"}}" onclick="event.preventDefault();if(confirm('Deseja excluir este registro?')){window.location.href='{{"/aplication/{$usuario->id}/excluir"}}'}">Remover</a>
                         </td>
                     </tr>
                 @endforeach
